@@ -1,6 +1,28 @@
-Animated Greenlink Logo
+## Animated Greenlink Logo
 
-[Click here to see live example](https://cvanem.github.io/greenlink-logo/)
+[Click here for live example](https://cvanem.github.io/greenlink-logo/)
+
+## Usage
+
+Import:   
+   
+    import GreenlinkLogo from 'greenlink-logo';
+    
+Use as Component:
+    
+    <GreenlinkLogo animate={true} />
+    
+Available Properties:
+    
+    text?: string; //The text to display.  Defaults to greenlink
+    showtext?: boolean; //Show the text, defaults to true
+    variant?: "condensed" | "small" | "normal" | "large"; //Defaults to small
+    icon?: boolean; //Show the link icon, defaults to true
+    animate?: boolean; //Animate, defaults to false
+    iconcolor?: string; //Color of the link icon, defaults the the greenlink green color
+    textcolor?: string; //Color of the text, defautls to 'inherit'    
+
+###
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
