@@ -1,3 +1,7 @@
+Animated Greenlink Logo
+
+[Click here to see live example](https://cvanem.github.io/greenlink-logo/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
