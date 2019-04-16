@@ -1,2 +1,2 @@
-import LogoProvider from './LogoProvider';
-export default LogoProvider;
+import LogoContainer from './LogoContainer';
+export default LogoContainer;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import * as React from "react";
 import Bounce from "react-reveal/Bounce";
 import LightSpeed from "react-reveal/LightSpeed";
 import Slide from "react-reveal/Slide";
@@ -10,15 +10,13 @@ import Jump from "react-reveal/Jump";
 import Jello from "react-reveal/Jello";
 
 interface ComponentProps {
-  animate?: string;
+  animate: "left" | "right" | "none";
   text?: string;
   height?: number;
   width?: any;
   classes?: any;
   children?: any;
 }
-
-const animateMappingInt = ["left", "right"];
 
 const animateMapping = {
   right: { right: true },
@@ -31,11 +29,9 @@ export function randomInt(min: any, max: any) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function mapAnimateProps(animate: string) {    
-    return 0;// animateMapping[animate.toLowerCase()];
-  }
-
-
+function mapAnimateProps(animate: string) {
+  return animateMapping[animate];
+}
 
 const animations = [
   Bounce,
@@ -55,12 +51,12 @@ export default class AnimateMapped extends React.Component<ComponentProps, {}> {
     var index = animate && randomInt(0, animations.length - 1);
     var AnimationComponent = animations[index];
 
-    return animate != null ? (
+    return animate == "none" ? (
+      children
+    ) : (
       <AnimationComponent {...mapAnimateProps(animate)}>
         {children}
       </AnimationComponent>
-    ) : (
-      children
     );
   }
 }

@@ -1,10 +1,9 @@
 import * as React from "react";
-import AnimateMapped from "./AnimateMapped";
 import createSvgIcon from "@material-ui/icons/utils/createSvgIcon";
 
-const GreenlinkSvgIcon = createSvgIcon(
+export default createSvgIcon(
   <React.Fragment>
-    <path fill="none" d="M0 0h54v24H0z" />
+    <path fill="none" d="M0 0h24v24H0z" />
     <path
       d="M 18.03,0.21
            C 17.51,0.03 16.62,0.06 16.06,0.06
@@ -90,44 +89,3 @@ const GreenlinkSvgIcon = createSvgIcon(
   </React.Fragment>,
   "GreenlinkIcon"
 );
-
-interface ComponentProps {
-  height?: number;  
-  color?: string;
-  animate: 'left' | 'right' | 'none';
-  children?: any;
-  classes?: any;
-}
-
-export const logoWidthMap = {
-  condensed: 67,
-  small: 89,
-  normal: 89,
-  large: 143
-};
-
-export const logoHeightMap = {
-  condensed: 30,
-  small: 40,
-  normal: 40,
-  large: 64
-};
-
-export default class Logo extends React.Component<ComponentProps, {}> {
-  public render() {
-    const { color, animate, height } = this.props;    
-    //The extra div with a height prevents screen bouncing on initial renders
-    const nativeColor = color ? color : '#92C83E';
-    return (
-      <AnimateMapped animate={animate}>
-        <div style={{ position: "relative", height: height }}>
-          <GreenlinkSvgIcon
-            viewBox="0 0 38.69 17.14"            
-            nativeColor={nativeColor}
-            style={{ width: "100%", height: "100%" }}
-          />
-        </div>
-      </AnimateMapped>
-    );
-  }
-}
