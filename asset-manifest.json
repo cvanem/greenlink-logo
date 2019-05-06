@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.65027555.css",
-  "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.ac364ebc.js",
-  "main.js.map": "static/js/main.ac364ebc.js.map"
+  "files": {
+    "main.css": "/greenlink-logo/static/css/main.84facf53.chunk.css",
+    "main.js": "/greenlink-logo/static/js/main.a2912671.chunk.js",
+    "main.js.map": "/greenlink-logo/static/js/main.a2912671.chunk.js.map",
+    "runtime~main.js": "/greenlink-logo/static/js/runtime~main.43ebc03c.js",
+    "runtime~main.js.map": "/greenlink-logo/static/js/runtime~main.43ebc03c.js.map",
+    "static/js/2.5ee10105.chunk.js": "/greenlink-logo/static/js/2.5ee10105.chunk.js",
+    "static/js/2.5ee10105.chunk.js.map": "/greenlink-logo/static/js/2.5ee10105.chunk.js.map",
+    "index.html": "/greenlink-logo/index.html",
+    "precache-manifest.ddab0e85f4992d9a8ec662453d8d588d.js": "/greenlink-logo/precache-manifest.ddab0e85f4992d9a8ec662453d8d588d.js",
+    "service-worker.js": "/greenlink-logo/service-worker.js",
+    "static/css/main.84facf53.chunk.css.map": "/greenlink-logo/static/css/main.84facf53.chunk.css.map"
+  }
 }
