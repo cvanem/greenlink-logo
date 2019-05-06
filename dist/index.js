@@ -7151,7 +7151,7 @@ var decorate = withStyles$1(function (_a) {
         textNormal: __assign({}, typography.h2, { fontWeight: 740, letterSpacing: 1.5 }),
         textLarge: __assign({}, typography.h1, { fontWeight: 740, letterSpacing: 1.5 })
     });
-});
+}, { name: 'GreenlinkLogoText' });
 var logoTextWidthMap = {
     condensed: 183,
     small: 242,
@@ -7888,7 +7888,7 @@ var decorate$1 = withStyles$1(function (_a) { return ({
         display: "inline-block",
         postion: "relative" //allows top/bottom to be specified
     }
-}); });
+}); }, { name: 'GreenlinkLogoContainer' });
 var DecoratedClass = decorate$1(/** @class */ (function (_super) {
     __extends(LogoContainer, _super);
     function LogoContainer() {

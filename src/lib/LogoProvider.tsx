@@ -35,7 +35,7 @@ const decorate = withStyles(({ palette }) => ({
     display: 'inline-block',
     postion: 'relative', //allows top/bottom to be specified
   },
-}));
+}),{ name: 'GreenlinkLogoProvider' });
 
 export const logoTextMarginMap = { condensed: 3, small: 5, normal: 5, large: 8 };
 export const spacingMap = { condensed: 8, small: 8, normal: 8, large: 16 };

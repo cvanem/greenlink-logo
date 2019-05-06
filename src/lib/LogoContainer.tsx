@@ -44,7 +44,7 @@ const decorate = withStyles(({}) => ({
     display: "inline-block",
     postion: "relative" //allows top/bottom to be specified
   }
-}));
+}),{ name: 'GreenlinkLogoContainer' });
 
 const DecoratedClass = decorate(
   class LogoContainer extends React.Component<

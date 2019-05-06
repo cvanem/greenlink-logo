@@ -38,7 +38,7 @@ const decorate = withStyles(({ typography }) => ({
     fontWeight: 740,
     letterSpacing: 1.5
   }
-}));
+}),{ name: 'GreenlinkLogoText' });
 
 export const logoTextWidthMap = {
   condensed: 183,
