@@ -1,8 +1,4 @@
 import * as React from "react";
-
-//Material UI Next
-//import { Typography } from '@material-ui/core';
-import withStyles from "@material-ui/core/styles/withStyles";
 import AnimateMapped from "./AnimateMapped";
 
 interface ComponentProps {
@@ -16,32 +12,37 @@ interface ComponentProps {
   children?: any;
 }
 
-const decorate = withStyles(
-  ({ typography }) => ({
-    root: {},
-    textCondensed: {
-      ...typography.h3,
-      fontWeight: 740,
-      letterSpacing: -2
-    },
-    textSmall: {
-      ...typography.h2,
-      fontWeight: 740,
-      letterSpacing: -1
-    },
-    textNormal: {
-      ...typography.h2,
-      fontWeight: 740,
-      letterSpacing: 1.5
-    },
-    textLarge: {
-      ...typography.h1,
-      fontWeight: 740,
-      letterSpacing: 1.5
-    }
-  }),
-  { name: "GreenlinkLogoText" }
-);
+const styles = {
+  root: {},
+  textCondensed: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: "3rem",
+    lineHeight: 1.04,
+    fontWeight: 740,
+    letterSpacing: -2
+  },
+  textSmall: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: "3.75rem",
+    lineHeight: 1,
+    fontWeight: 740,
+    letterSpacing: -1
+  },
+  textNormal: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: "3.75rem",
+    lineHeight: 1,
+    fontWeight: 740,
+    letterSpacing: 1.5
+  },
+  textLarge: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontSize: "6rem",
+    lineHeight: 1,
+    fontWeight: 740,
+    letterSpacing: 1.5
+  }
+};
 
 export const logoTextWidthMap = {
   condensed: 183,
@@ -50,20 +51,22 @@ export const logoTextWidthMap = {
   large: 416
 };
 
+const getStyle = variant => {
+  return variant == "condensed"
+    ? styles.textCondensed
+    : variant == "small"
+    ? styles.textSmall
+    : variant == "large"
+    ? styles.textLarge
+    : styles.textNormal;
+};
+
 const LogoText = (props: ComponentProps) => {
   const { text, color, variant, animate, width, height, classes } = props;
   const logotext = (
     <div
-      className={
-        variant == "condensed"
-          ? classes.textCondensed
-          : variant == "small"
-          ? classes.textSmall
-          : variant == "large"
-          ? classes.textLarge
-          : classes.textNormal
-      }
       style={{
+        ...getStyle(variant),
         color: color || "inherit",
         align: "center",
         height: height
@@ -76,4 +79,4 @@ const LogoText = (props: ComponentProps) => {
   return <AnimateMapped animate={animate}>{logotext}</AnimateMapped>;
 };
 
-export default decorate(LogoText);
+export default LogoText;
