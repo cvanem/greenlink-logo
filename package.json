@@ -34,7 +34,7 @@
     "@material-ui/icons": "v4.0.0-beta.0",
     "@material-ui/styles": "v4.0.0-beta.1",
     "@svgr/rollup": "^4.2.0",
-    "@types/jest": "^24.0.12",
+    "@types/jest": "24.7.1",
     "@types/react": "^16.8.16",
     "@types/react-dom": "^16.8.4",
     "cross-env": "^5.2.0",
