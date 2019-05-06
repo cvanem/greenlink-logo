@@ -6,10 +6,10 @@
   "private": true,
   "dependencies": {
     "prop-types": "^15.6.2",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
-    "greenlink-logo": "link:.."    
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "^3.0.0",
+    "greenlink-logo": "link:.."
   },
   "scripts": {
     "start": "react-scripts start",

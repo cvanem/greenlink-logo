@@ -45,18 +45,16 @@ const animations = [
   Jello
 ];
 
-export default class AnimateMapped extends React.Component<ComponentProps, {}> {
-  public render() {
-    const { animate, children } = this.props;
-    var index = animate && randomInt(0, animations.length - 1);
-    var AnimationComponent = animations[index];
+export default (props: ComponentProps) => {
+  const { animate, children } = props;
+  var index = animate && randomInt(0, animations.length - 1);
+  var AnimationComponent = animations[index];
 
-    return animate == "none" ? (
-      children
-    ) : (
-      <AnimationComponent {...mapAnimateProps(animate)}>
-        {children}
-      </AnimationComponent>
-    );
-  }
-}
+  return animate == "none" ? (
+    children
+  ) : (
+    <AnimationComponent {...mapAnimateProps(animate)}>
+      {children}
+    </AnimationComponent>
+  );
+};

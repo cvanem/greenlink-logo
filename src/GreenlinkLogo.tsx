@@ -2,10 +2,11 @@ import * as React from "react";
 import createSvgIcon from "@material-ui/icons/utils/createSvgIcon";
 
 export default createSvgIcon(
-  <React.Fragment>
-    <path fill="none" d="M0 0h24v24H0z" />
-    <path
-      d="M 18.03,0.21
+  () => (
+    <React.Fragment>
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path
+        d="M 18.03,0.21
            C 17.51,0.03 16.62,0.06 16.06,0.06
              16.06,0.06 12.79,0.06 12.79,0.06
              12.79,0.06 9.62,0.06 9.62,0.06
@@ -85,7 +86,8 @@ export default createSvgIcon(
              24.49,13.35 24.35,13.62 24.26,13.75
              24.07,14.04 23.85,14.31 23.63,14.57
              22.81,15.55 21.80,16.29 20.68,16.89 Z"
-    />
-  </React.Fragment>,
+      />
+    </React.Fragment>
+  ),
   "GreenlinkIcon"
 );
