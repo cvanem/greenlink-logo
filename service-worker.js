@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/greenlink-logo/precache-manifest.ddab0e85f4992d9a8ec662453d8d588d.js"
+  "/greenlink-logo/precache-manifest.35a6287f0b360fd6e22949279d83d315.js"
 );
 
 self.addEventListener('message', (event) => {
