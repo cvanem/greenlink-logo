@@ -6,8 +6,10 @@ import postcss from 'rollup-plugin-postcss'
 import resolve from 'rollup-plugin-node-resolve'
 import url from 'rollup-plugin-url'
 import svgr from '@svgr/rollup'
-
+import babel from 'rollup-plugin-babel'
 import pkg from './package.json'
+const extensions = ['.js', '.jsx', '.ts', '.tsx']
+
 const commonjsOptions = {
   // ignoreGlobal: true,
   include: /node_modules/,
@@ -57,6 +59,11 @@ export default {
       rollupCommonJSResolveHack: true,
       clean: true
     }),
-    commonjs(commonjsOptions)
+    commonjs(commonjsOptions),
+    babel({
+      extensions,
+      include: ['src/**/*'],
+      exclude: 'node_modules/**',
+    }),
   ]
 }
